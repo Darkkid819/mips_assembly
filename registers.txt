@@ -1,0 +1,20 @@
+Registers: MIPS has a set of 32 registers, each 32 bits wide. These are used for arithmetic, loading data, storing data, and more. The most commonly used registers include:
+
+    $zero: Always contains the value 0.
+    $at: Reserved for the assembler.
+    $v0-$v1: Used for function results.
+    $a0-$a3: Used for function arguments.
+    $t0-$t7: Temporary registers, not preserved across function calls.
+    $s0-$s9: Saved registers, preserved across function calls.
+    $k0-$k1: Used by the operating system's kernel for temporary storage.
+    $gp: Global pointer.
+    $sp: Stack pointer.
+    $fp: Frame pointer.
+    $ra: Return address.
+
+    pc: Holds the address of the current instruction that the processor is executing.
+
+HI and LO registers are used to store the results of multiply and divide operations:
+
+    hi: Holds the high-order 32 bits of the result.
+    lo: Holds the low-order 32 bits of the result.
