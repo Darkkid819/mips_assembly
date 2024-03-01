@@ -131,13 +131,17 @@ even2:  syscall
 	# Even/Odd method 3
 	la $a0, evenOddMessage
 	syscall
-	
-	andi $t1, $s0, 0x1
+
+	li $t2, 2
+	div $s0, $t2
+	mfhi $t1
+
 	beqz $t1, even3
 	la $a0, oddMessage
 	j odd3
-even3:  la $a0, evenMessage
-odd3:   syscall
+even3: 	la $a0, evenMessage
+odd3:  	syscall
+
 
 	# Exit program
 	li $v0, 10
